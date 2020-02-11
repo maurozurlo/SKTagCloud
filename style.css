@@ -1,0 +1,135 @@
+:root {
+  --primary: #f5eded;
+  --secondary: #e49797;
+  --accent-30: #fccaca;
+  --accent-60: #ee7272;
+  --accent-100: #d72323;
+  --red: #791010;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Tox';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(Tox.ttf);
+}
+
+@font-face {
+  font-family: '1942';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(1942.ttf);
+}
+
+@font-face {
+  font-family: 'OldNewspaperTypes';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(OldNewspaperTypes.ttf);
+}
+
+body {
+  background-color: var(--secondary);
+  color: var(--primary);
+  font-family: 'Roboto Slab', serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  padding-top: 10vh;
+}
+
+.btn-holder {
+  display: grid;
+  grid-template-areas: "auto auto btn" "auto auto btn";
+  padding: 1em .5em;
+  grid-gap: 5px;
+}
+
+#content {
+  color: var(--red);
+  padding: 5em 3.5em;
+  background-image: url(bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 100vh;
+  max-height: 1000px;
+  overflow: hidden;
+}
+
+button {
+  grid-area: btn;
+  display: inline-block;
+  border: none;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.2s;
+  cursor: pointer;
+  color: var(--primary);
+  background-color: var(--accent-60);
+}
+
+button:hover {
+  color: var(--accent-100);
+  background-color: var(--accent-30);
+}
+
+input {
+  width: 80%;
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  padding: 10px;
+  background-color: var(--accent-30);
+  color: var(--accent-100);
+}
+
+label {
+  align-self: center;
+}
+
+@media all and (max-width:30em) {
+  button {
+    display: block;
+    margin: 0.4em auto;
+  }
+}
+
+h1 {
+  color: var(--accent-100);
+}
+
+small {
+  color: var(--accent-30);
+}
+
+.font-tox {
+  font-family: 'Tox';
+}
+
+.font-1942 {
+  font-family: '1942';
+}
+
+.font-OldNewspaperTypes {
+  font-family: OldNewspaperTypes;
+}
+
+p>span {
+  mix-blend-mode: multiply;
+}

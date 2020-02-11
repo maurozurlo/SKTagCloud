@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Serial Killer TagCloud Generator</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Serial Killer TagCloud Generator</h1>
+    <small>by El Miauro</small>
+
+    <div class="btn-holder">
+      <label for="word">Word / Phrase</label>
+      <input type="text" id="word" value="all work and no play makes jack a dull boy">
+      <label for="repetitions">Repetitions</label>
+      <input type="number" value=50 id="repetitions">
+      <button onclick="refresh()">Generate</button>
+    </div>
+
+    <p id="content" class='font-tox' onclick="swapFont()"></p>
+  </div>
+
+  <script src="app.js"></script>
+  <script>refresh()</script>
+</body>
+
+</html>
